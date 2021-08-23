@@ -1,0 +1,191 @@
+:root {
+  /* IMAGE BACKGROUNDS VARS */
+  --image-background-size: 100%;
+  --image-containers-width: 100%;
+  --image-containers-height: 310px;
+  --image-background-repeat: no-repeat;
+
+  /* TITLE SIZE */
+  --title-font-size: 2rem;
+
+  /* PARAGRAPH VARS */
+  --paragraph-width: 90%;
+  --paragraph-center: 0 auto;
+  --paragraph-line-height: 1.7rem;
+
+  /* LINKS VARS */
+  --link-block: block;
+  --link-width: 40%;
+  --link-text-align: center;
+  --link-center: 3rem auto;
+  --link-color: black;
+  --link-border: 0.3rem solid yellow;
+  /* OTHERS */
+  --text-align: center;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* img {
+  width: 100%;
+} */
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../images/icon-arrow-down.svg"), url("../images/mobile/image-header.jpg");
+  background-color: blue;
+  background-repeat: no-repeat no-repeat;
+  background-size: 9%, 100% 100%;
+  background-position: 50% 70%, 0;
+  /* background: olive; */
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 7%;
+  width: 90%;
+}
+.modalContainer {
+  display: none;
+}
+
+.titleContainer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 25%;
+}
+
+.we-are {
+  display: block;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.imagesGridContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 750px 750px 600px 600px;
+}
+
+/* TRANSFORM CONTAINER */
+.transformContainer {
+  width: 100%;
+}
+.transformImgContainer {
+  width: var(--image-containers-width);
+  height: var(--image-containers-height);
+  background-image: url("../images/mobile/image-transform.jpg");
+  background-repeat: var(--image-background-reapeat);
+  background-size: var(--image-containers-width);
+}
+
+.transformTextContainer {
+  margin-top: 20%;
+}
+
+.transformTitle {
+  font-size: var(--title-font-size);
+  text-align: center;
+}
+
+.transformParagraph,
+.standOutParagraph {
+  /* font-size: 1.01rem; */
+  width: var(--paragraph-width);
+  margin: var(--paragraph-center);
+  text-align: var(--text-align);
+  line-height: var(--paragraph-line-height);
+}
+.transformLink,
+.standOutLink {
+  display: var(--link-block);
+  width: var(--link-width);
+  text-align: var(--link-text-align);
+  margin: var(--link-center);
+  /* background-color: blue; */
+  color: var(--link-color);
+  border-bottom: var(--link-border);
+}
+
+/* STAND OUT CONTAINER */
+
+.standOutImgContainer {
+  width: var(--image-containers-width);
+  height: var(--image-containers-height);
+  /* background-color: red; */
+  background-image: url("../images/mobile/image-stand-out.jpg");
+  background-repeat: var(--image-background-repeat);
+
+  background-size: var(--image-background-size);
+}
+
+.standOutTextContainer {
+  margin-top: 20%;
+}
+
+.standOutTitle {
+  font-size: var(--title-font-size);
+  text-align: var(--text-align);
+}
+
+.standOutLink {
+  border-bottom: 0.3rem solid #fe7563;
+  /* center */
+}
+
+/* GRAPHIC DESIGN CONTAINER */
+.graphicContainer {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  background-size: var(--image-background-size);
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.graphicTitle {
+  margin-top: 110%;
+  text-align: var(--text-align);
+}
+
+.graphicParagraph {
+  width: var(--paragraph-width);
+  margin: var(--paragraph-center);
+  text-align: var(--text-align);
+  line-height: var(--paragraph-line-height);
+}
+
+.photographyContainer {
+  background-image: url("../images/mobile/image-photography.jpg");
+  background-size: var(--image-background-size);
+  background-repeat: no-repeat;
+  /* background-color: black; */
+}
+
+.photographyTitle {
+  margin-top: 110%;
+  text-align: var(--text-align);
+}
+
+.photographyParagraph {
+  margin: var(--paragraph-center);
+  width: var(--paragraph-width);
+  text-align: var(--text-align);
+}
