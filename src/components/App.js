@@ -5,9 +5,9 @@ import thomasImg from "./SunnySide/assets/images/image-thomas.jpg";
 import jennieImg from "./SunnySide/assets/images/image-jennie.jpg";
 
 const testimonials = [
-  { userImg: emilyImg, userTestimonial: "We put trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit. ", userName: "Emely R.", userOcupation: "Markting Director" },
-  { userImg: thomasImg, userTestimonial: "SunnySide's enthusiasm coupled with their keen interest in our brand's success made it a setisfysing and enjoyable expirience.", userName: "Thomas S.", userOcupation: "Chief Operating Officer" },
-  { userImg: jennieImg, userTestimonial: "Incredibly end Result! Our sales increased over 400% when worked with Sunnyside. Highly recommended!", userName: "Jennie F.", userOcupation: "Business Owner" },
+  { id: 1, userImg: emilyImg, userTestimonial: "We put trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit. ", userName: "Emely R.", userOcupation: "Markting Director" },
+  { id: 2, userImg: thomasImg, userTestimonial: "SunnySide's enthusiasm coupled with their keen interest in our brand's success made it a setisfysing and enjoyable expirience.", userName: "Thomas S.", userOcupation: "Chief Operating Officer" },
+  { id: 3, userImg: jennieImg, userTestimonial: "Incredibly end Result! Our sales increased over 400% when worked with Sunnyside. Highly recommended!", userName: "Jennie F.", userOcupation: "Business Owner" },
 ];
 
 function App() {

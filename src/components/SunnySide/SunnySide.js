@@ -33,7 +33,7 @@ const SunnySide = (props) => {
       <main>
         {" "}
         <Main />
-        <Testimonials testimonials={props.testimonials} />
+        <Testimonials key="holae" testimonials={props.testimonials} />
       </main>
     </>
   );
@@ -86,17 +86,22 @@ const Main = () => {
 };
 
 const Testimonials = (props) => {
-  console.log(props);
   return (
-    <div className="testimonailContainers">
-      {/* <h3>CLIENT TESTIMONAILS</h3> */}
+    <div className="testimonialContainers">
+      <h3 className="testimonialTitle">CLIENT TESTIMONAILS</h3>
       {props.testimonials.map((testimonial) => {
         return (
-          <div>
-            <img src={testimonial.userImg} alt="user img" />
-            <p>{testimonial.userTestimonial}</p>
-            <span>{testimonial.userName}</span>
-            <span>{testimonial.userOcupation}</span>
+          <div className="testimonialSubContainer" key={testimonial.id}>
+            <img className="testimonialUserImg" key={testimonial.userImg} src={testimonial.userImg} alt="user img" />
+            <p className="testimonialUserParagraph" key={testimonial.userTestimonial}>
+              {testimonial.userTestimonial}
+            </p>
+            <span className="testimonialUserName" key={testimonial.userName}>
+              {testimonial.userName}
+            </span>
+            <span className="testimonialUserOcupation" key={testimonial.userOcupation}>
+              {testimonial.userOcupation}
+            </span>
           </div>
         );
       })}
