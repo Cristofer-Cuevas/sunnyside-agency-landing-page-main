@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "./SunnySide";
 
 import "./assets/css/normalize.css";
@@ -34,6 +36,8 @@ const SunnySide = (props) => {
         {" "}
         <Main />
         <Testimonials key="holae" testimonials={props.testimonials} />
+        <ImagesGrid />
+        <Footer />
       </main>
     </>
   );
@@ -105,6 +109,31 @@ const Testimonials = (props) => {
           </div>
         );
       })}
+    </div>
+  );
+};
+
+const ImagesGrid = () => {
+  return <div className="imagesBottomContainer"></div>;
+};
+
+const Footer = () => {
+  return (
+    <div className="footerContainer">
+      <img className="logoFooter" src={logo} alt="logo" />
+      <ul className="linkContainers">
+        <li className="footerLink">About</li>
+        <li className="footerLink">Services</li>
+        <li className="footerLink">Projects</li>
+      </ul>
+      <ul className="socialMediaLinks">
+        <li>
+          <a className="facebookLink" href="#"></a>
+        </li>
+        <li className="InstagramLink"></li>
+        <li className="twitterLink"></li>
+        <li className="pinterestLink"></li>
+      </ul>
     </div>
   );
 };
