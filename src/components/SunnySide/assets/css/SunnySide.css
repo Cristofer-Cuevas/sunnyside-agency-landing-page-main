@@ -1,0 +1,381 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 80%;
+  height: 145vmin;
+  position: relative;
+  background-color: red;
+  background-image: url("../images/icon-arrow-down.svg"), url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 2.5rem 7rem, 100% 100%;
+  background-position: 50% 70%;
+}
+
+.hamburgerIcon {
+  cursor: pointer;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 90%;
+  top: 6%;
+}
+
+.titleContainer {
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 25%;
+}
+
+.title {
+  font-size: 10vmin;
+  letter-spacing: 0.5rem;
+  color: white;
+}
+
+.navContainer {
+  z-index: 1;
+  margin-top: 120px;
+  width: 90%;
+  height: 300px;
+  display: none;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0;
+}
+
+.menuContainer {
+  background-color: hsl(0, 0%, 100%);
+  font-family: Barlow;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuContainer * {
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.menuItem {
+  font-size: 1.2rem;
+}
+
+.contactLink {
+  font-family: Fraunces;
+  background-color: yellow;
+  color: black;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.showNavContainer {
+  display: block;
+}
+
+/* IMAGE CONTAINERS AND PARAGRAPHS */
+
+.imageGridContainers {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(4, 200vmin); */
+  grid-template-rows: repeat(2, 200vmin) repeat(2, 160vmin);
+  height: auto;
+}
+
+.transformContainer,
+.standOutContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: 1.4fr 2fr;
+  /* background-color: red; */
+}
+
+.transformImgContainer {
+  background-image: url("../images/mobile/image-transform.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.transformTextContainer,
+.standOutTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.transformTitle,
+.standOutTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 2.1rem;
+  margin: 6vmin 0 0 0;
+  font-family: Fraunces;
+  font-weight: 900;
+}
+
+.transformParagraph,
+.standOutParagraph {
+  width: 90%;
+  text-align: center;
+  line-height: 1.9rem;
+  /* margin-top: 5vmin; */
+  font-family: Barlow;
+  font-size: 1.1rem;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+.transformLink,
+.standOutLink {
+  color: black;
+  margin-top: 10%;
+  font-weight: 700;
+  font-family: Fraunces;
+}
+
+/* STAND OUT CONTAINER */
+
+.standOutImgContainer {
+  background-image: url("../images/mobile/image-stand-out.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* GRAPHIC CONTAINER */
+
+.graphicContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.graphicParagraph,
+.photographyParagraph {
+  width: 90%;
+  color: hsla(0, 0%, 0%, 0.5);
+  font-family: Barlow;
+  line-height: 1.6rem;
+  margin-bottom: 10%;
+}
+
+.graphicTitle,
+.photographyTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: Fraunces;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+
+/* PHOTOGRAPHY CONTAINER */
+
+.photographyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background-image: url("../images/mobile/image-photography.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* TESTIMONIALS  */
+
+.testimonialContainers {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(max-content, 1fr));
+  row-gap: 20vmin;
+}
+
+.testimonialTitle {
+  width: 100%;
+  color: hsla(0, 0%, 0%, 0.4);
+  margin: 16vmin auto 18vmin;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+  font-family: Fraunces;
+  /* font */
+}
+
+.testimonialSubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialUserImg {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.testimonialUserParagraph {
+  color: hsla(0, 0%, 0%, 0.5);
+  margin-top: 7vmin;
+  width: 85%;
+  text-align: center;
+  line-height: 1.8rem;
+  font-family: Barlow;
+  font-size: 1.1rem;
+}
+
+.testimonialUserName {
+  margin-top: 7vmin;
+  margin-bottom: 4vmin;
+  font-family: Fraunces;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.testimonialUserOcupation {
+  color: hsla(0, 0%, 0%, 0.3);
+  font-size: 0.8rem;
+  font-family: Barlow;
+  font-size: 0.9rem;
+}
+
+/* IMAGES BOTTOM GRID */
+
+.imagesBottomContainer {
+  margin-top: 25vmin;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50vmin);
+}
+
+.milkBottels {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.orange {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/mobile/image-gallery-orange.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.cone {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/mobile/image-gallery-cone.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.sugarCubes {
+  width: 100%;
+  height: auto;
+  background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.footerContainer {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-content: center center;
+  background-color: hsl(167, 44%, 70%);
+}
+
+.logoFooter {
+  margin-top: 25px;
+  width: 200px;
+}
+
+.linkContainers {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: hsla(0, 0%, 0%, 0.5);
+  padding: 0;
+  font-family: Barlow;
+  font-size: 1.1rem;
+}
+
+.socialMediaLinks {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.facebookLink,
+.instagramLink,
+.twitterLink,
+.pinterestLink {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.facebookLink {
+  background-image: url("../images/icon-facebook.svg");
+}
+
+.instagramLink {
+  background-image: url("../images/icon-instagram.svg");
+}
+
+.twitterLink {
+  background-image: url("../images/icon-twitter.svg");
+}
+
+.pinterestLink {
+  background-image: url("../images/icon-pinterest.svg");
+}

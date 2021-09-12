@@ -7,35 +7,61 @@ import "./assets/css/SunnySide.css";
 
 import logo from "./assets/images/logo.svg";
 import hamburgerIcon from "./assets/images/icon-hamburger.svg";
+import { useRef } from "react";
 
 const SunnySide = (props) => {
-  console.log(props.testimonials);
+  const navContainer = useRef(null);
+
+  const handleHamburgerIconClick = (e) => {
+    navContainer.current.classList.toggle("showNavContainer");
+  };
+
   return (
     <>
       <header className="headerContainer">
         <div className="logoContainer">
           <img src={logo} alt="logo" />
-          <img className="hamburgerIcon" src={hamburgerIcon} alt="a hamburger icon" />
+          <img className="hamburgerIcon" src={hamburgerIcon} alt="a hamburger icon" onClick={handleHamburgerIconClick} />
         </div>
-        <div className="modalContainer">
+        <nav ref={navContainer} className="navContainer">
           <ul className="menuContainer">
-            <li className="muneItem">About</li>
-            <li className="muneItem">Services</li>
-            <li className="muneItem">Projects</li>
-            <li className="muneItem">CONTACT</li>
+            <li className="menuItem">
+              {" "}
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
+                About
+              </a>
+            </li>
+            <li className="menuItem">
+              {" "}
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
+                Services
+              </a>{" "}
+            </li>
+            <li className="menuItem">
+              {" "}
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
+                Projects
+              </a>{" "}
+            </li>
+            <li className="menuItem">
+              {" "}
+              <a className="contactLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
+                CONTACT
+              </a>{" "}
+            </li>
           </ul>
-        </div>
+        </nav>
         <div className="titleContainer">
           <h1 className="title">
             {" "}
-            <span className="we-are">WE ARE</span>CREATIVES
+            <span className="we-are">WE ARE</span> CREATIVES
           </h1>
         </div>
       </header>
       <main>
         {" "}
         <Main />
-        <Testimonials key="holae" testimonials={props.testimonials} />
+        <Testimonials testimonials={props.testimonials} />
         <ImagesGrid />
         <Footer />
       </main>
@@ -46,7 +72,7 @@ const SunnySide = (props) => {
 const Main = () => {
   return (
     <>
-      <div className="imagesGridContainer">
+      <div className="imageGridContainers">
         {/* Transfom Container */}
         <div className="transformContainer">
           <div className="transformImgContainer"></div>
@@ -64,13 +90,13 @@ const Main = () => {
         <div className="standOutContainer">
           <div className="standOutImgContainer"></div>
           <div className="standOutTextContainer">
-            <h2 className="standOutTitle">Stand Out to the audience</h2>
+            <h2 className="standOutTitle">Stand Out to the right audience</h2>
             <p className="standOutParagraph">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extand your brand in digital places.</p>
+            <a className="standOutLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer" target="_blank">
+              {" "}
+              LEARN MORE
+            </a>
           </div>
-          <a className="standOutLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noreferrer" target="_blank">
-            {" "}
-            LEARN MORE
-          </a>
         </div>
 
         {/* Graphic Container */}
@@ -91,30 +117,39 @@ const Main = () => {
 
 const Testimonials = (props) => {
   return (
-    <div className="testimonialContainers">
+    <div className="testimonials">
       <h3 className="testimonialTitle">CLIENT TESTIMONAILS</h3>
-      {props.testimonials.map((testimonial) => {
-        return (
-          <div className="testimonialSubContainer" key={testimonial.id}>
-            <img className="testimonialUserImg" key={testimonial.userImg} src={testimonial.userImg} alt="user img" />
-            <p className="testimonialUserParagraph" key={testimonial.userTestimonial}>
-              {testimonial.userTestimonial}
-            </p>
-            <span className="testimonialUserName" key={testimonial.userName}>
-              {testimonial.userName}
-            </span>
-            <span className="testimonialUserOcupation" key={testimonial.userOcupation}>
-              {testimonial.userOcupation}
-            </span>
-          </div>
-        );
-      })}
+      <div className="testimonialContainers">
+        {props.testimonials.map((testimonial) => {
+          return (
+            <div className="testimonialSubContainer" key={testimonial.id}>
+              <img className="testimonialUserImg" key={testimonial.userImg} src={testimonial.userImg} alt="user img" />
+              <p className="testimonialUserParagraph" key={testimonial.userTestimonial}>
+                {testimonial.userTestimonial}
+              </p>
+              <span className="testimonialUserName" key={testimonial.userName}>
+                {testimonial.userName}
+              </span>
+              <span className="testimonialUserOcupation" key={testimonial.userOcupation}>
+                {testimonial.userOcupation}
+              </span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
 const ImagesGrid = () => {
-  return <div className="imagesBottomContainer"></div>;
+  return (
+    <div className="imagesBottomContainer">
+      <div className="milkBottels"></div>
+      <div className="orange"></div>
+      <div className="cone"></div>
+      <div className="sugarCubes"></div>
+    </div>
+  );
 };
 
 const Footer = () => {
@@ -128,11 +163,17 @@ const Footer = () => {
       </ul>
       <ul className="socialMediaLinks">
         <li>
-          <a className="facebookLink" href="#"></a>
+          <a className="facebookLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"></a>
         </li>
-        <li className="InstagramLink"></li>
-        <li className="twitterLink"></li>
-        <li className="pinterestLink"></li>
+        <li>
+          <a className="instagramLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"></a>
+        </li>
+        <li>
+          <a className="twitterLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"></a>
+        </li>
+        <li>
+          <a className="pinterestLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer"></a>
+        </li>
       </ul>
     </div>
   );
