@@ -10,21 +10,21 @@ import hamburgerIcon from "./assets/images/icon-hamburger.svg";
 import { useRef } from "react";
 
 const SunnySide = (props) => {
-  const navContainer = useRef(null);
+  const menuContainer = useRef(null);
 
   const handleHamburgerIconClick = (e) => {
-    navContainer.current.classList.toggle("showNavContainer");
+    menuContainer.current.classList.toggle("showMenuContainer");
   };
 
   return (
     <>
       <header className="headerContainer">
-        <div className="logoContainer">
-          <img src={logo} alt="logo" />
-          <img className="hamburgerIcon" src={hamburgerIcon} alt="a hamburger icon" onClick={handleHamburgerIconClick} />
-        </div>
-        <nav ref={navContainer} className="navContainer">
-          <ul className="menuContainer">
+        <nav className="navContainer">
+          <div className="logoContainer">
+            <img className="logo" src={logo} alt="logo" />
+            <img className="hamburgerIcon" src={hamburgerIcon} alt="a hamburger icon" onClick={handleHamburgerIconClick} />
+          </div>
+          <ul ref={menuContainer} className="menuContainer">
             <li className="menuItem">
               {" "}
               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">
