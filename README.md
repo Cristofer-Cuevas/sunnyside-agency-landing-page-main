@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### LINK TO PREVIEW SITE:
 
-https://sunnyside-agency-landing-page-main-zeta.vercel.app/
+https://sunnyside-agency-landing-page-main-zeta.vercel.app
