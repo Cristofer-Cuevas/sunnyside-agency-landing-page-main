@@ -8,4 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## `Live`
 
-[](https://sunnyside-agency-landing-page-main-zeta.vercel.app)
+Link: [Sunny Side Agency](https://sunnyside-agency-landing-page-main-zeta.vercel.app)
